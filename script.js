@@ -19,6 +19,8 @@ if (contactForm && contactStatus) {
   const sentText = "Thanks, your message was sent. I will reply by email soon.";
   const failText =
     "Your message could not be sent. Please email me at mithleshupadhyay515@gmail.com.";
+  const pendingText =
+    "This form is still being set up. Please email me at mithleshupadhyay515@gmail.com for now.";
 
   if (new URLSearchParams(window.location.search).get("sent") === "1") {
     showContactStatus("ok", sentText);
@@ -58,7 +60,8 @@ if (contactForm && contactStatus) {
       showContactStatus("ok", sentText);
     } catch (error) {
       console.error("Contact form:", error);
-      showContactStatus("error", failText);
+      // FormSubmit refuses messages until the owner clicks the link in its activation email.
+      showContactStatus("error", /activat/i.test(error.message) ? pendingText : failText);
     } finally {
       button.disabled = false;
     }
