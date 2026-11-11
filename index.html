@@ -14,7 +14,7 @@
   <meta property="og:title" content="Mithlesh Upadhyay | Senior Software Engineer">
   <meta
     property="og:description"
-    content="Backend, full-stack, and agentic AI engineer. Shipped myRado, a live in-store ad platform, from first commit to production in 6 weeks as its sole engineer."
+    content="Backend, full-stack, and agentic AI engineer. Took myRado, a live in-store ad platform, from first commit to production in 6 weeks as its sole full-stack engineer."
   >
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://mithleshupadhyay.github.io/">
@@ -62,7 +62,8 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="./Mithlesh_Upadhyay_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav-outline" href="./Mithlesh_Upadhyay_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav-cta" href="https://cal.com/mithlesh-upadhyay" target="_blank" rel="noopener noreferrer">Book a call</a>
       </nav>
     </header>
 
@@ -81,8 +82,9 @@
             <h1 id="hero-title">Mithlesh Upadhyay</h1>
             <p class="hero-copy">
               I build backend systems and AI agents, and I own products from the
-              first commit to production. Most recently I shipped myRado, a live
-              in-store ad network, as its sole engineer in 6 weeks.
+              first commit to production. Most recently I took myRado, a live
+              in-store ad network, from first commit to production in 6 weeks
+              as its sole full-stack engineer.
             </p>
           </div>
         </div>
@@ -116,9 +118,13 @@
         </aside>
 
         <div class="hero-actions" aria-label="Primary links">
-          <a class="button primary" href="mailto:mithleshupadhyay515@gmail.com">
+          <a class="button primary" href="https://cal.com/mithlesh-upadhyay" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon icon-call" aria-hidden="true">&#9742;</span>
+            Book a call
+          </a>
+          <a class="button" href="#contact">
             <span class="link-icon icon-email" aria-hidden="true">@</span>
-            Contact me
+            Send a message
           </a>
           <a class="button" href="./Mithlesh_Upadhyay_Resume.pdf" target="_blank" rel="noopener">
             <span class="link-icon icon-resume" aria-hidden="true">CV</span>
@@ -142,7 +148,7 @@
       <section class="stats-grid" aria-label="Professional highlights">
         <article class="stat-card">
           <strong>6 weeks</strong>
-          <span>from first commit to production for myRado, as its sole engineer</span>
+          <span>from first commit to production for myRado, as its sole full-stack engineer</span>
         </article>
 
         <article class="stat-card">
@@ -216,12 +222,13 @@
               <span>Radoflex - Aug 2026 to Present</span>
             </div>
             <p>
-              Sole engineer of myRado, a hyperlocal in-store ad network of LED screens
-              and RFID-verified print ads. Took it from first commit to production in
-              6 weeks: a FastAPI + PostgreSQL backend with 270+ REST endpoints, React 19
-              admin and advertiser apps, a Python edge runtime for 4G RFID readers, and
-              Razorpay, Cashfree, PayU, and UPI payments, backed by 2,400+ automated
-              tests and CI quality gates.
+              Sole full-stack engineer of myRado, a hyperlocal in-store ad network of
+              LED screens and RFID-verified print ads. Took it from first commit to
+              production in 6 weeks: a FastAPI + PostgreSQL backend with 270+ REST
+              endpoints, React 19 admin and advertiser apps, a Python edge runtime and
+              device gateway, and Razorpay, Cashfree, PayU, and UPI payments, backed by
+              2,400+ automated tests and CI quality gates. Integrated the embedded
+              engineer's LED controller SDK into the edge runtime.
             </p>
             <div class="item-links">
               <a href="https://myrado.io" target="_blank" rel="noopener noreferrer">myrado.io</a>
@@ -308,14 +315,14 @@
 
         <div class="project-grid">
           <article class="project-card featured wide">
-            <div class="project-label">Live product - Sole engineer - Radoflex</div>
+            <div class="project-label">Live product - Sole full-stack engineer - Radoflex</div>
             <h3>myRado</h3>
             <p>
               Hyperlocal in-store ad network: advertisers find nearby LED screens and
               print slots, book and pay online, and track their campaigns. I built the
               FastAPI backend (270+ endpoints, 83 Alembic migrations), the React 19
-              admin console and advertiser app, the edge runtime and WebSocket gateway
-              for RFID readers, payments, and the Docker and Caddy deployment.
+              admin console and advertiser app, the edge runtime and WebSocket device
+              gateway, payments, and the Docker and Caddy deployment.
             </p>
             <div class="project-links">
               <a href="https://myrado.io" target="_blank" rel="noopener noreferrer">
@@ -575,9 +582,61 @@
         <h2>Hiring for backend, full-stack, or agentic AI work?</h2>
         <p>
           I am open to full-time and contract roles, remote or in Delhi NCR, where
-          ownership, reliability, and practical AI matter. Email me at
-          mithleshupadhyay515@gmail.com.
+          ownership, reliability, and practical AI matter. Book a call, or send me a
+          message and I will reply by email.
         </p>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/mithleshupadhyay515@gmail.com" method="POST">
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="150" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-company">Company <span class="optional">(optional)</span></label>
+                <input id="cf-company" name="company" type="text" autocomplete="organization" maxlength="120">
+              </div>
+              <div class="field">
+                <label for="cf-topic">What is it about?</label>
+                <select id="cf-topic" name="topic">
+                  <option>Full-time role</option>
+                  <option>Contract or freelance work</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" maxlength="4000" required></textarea>
+            </div>
+            <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="Portfolio message">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thanks for your message. I have received it and will reply from mithleshupadhyay515@gmail.com soon. - Mithlesh Upadhyay">
+            <input type="hidden" name="_next" value="https://mithleshupadhyay.github.io/?sent=1#contact">
+            <div class="form-actions">
+              <button class="button primary" type="submit">Send message</button>
+              <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <aside class="contact-side" aria-label="Book a call">
+            <h3>Prefer to talk?</h3>
+            <p>Pick a time that suits you on my calendar.</p>
+            <a class="button primary" href="https://cal.com/mithlesh-upadhyay" target="_blank" rel="noopener noreferrer">
+              <span class="link-icon icon-call" aria-hidden="true">&#9742;</span>
+              Book a call
+            </a>
+            <p>Or email <a href="mailto:mithleshupadhyay515@gmail.com">mithleshupadhyay515@gmail.com</a></p>
+          </aside>
+        </div>
 
         <div class="contact-links">
           <a href="mailto:mithleshupadhyay515@gmail.com">
