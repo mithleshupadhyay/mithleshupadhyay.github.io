@@ -507,6 +507,111 @@ h3 {
   border-color: #9bbdab;
 }
 
+.timeline-item {
+  scroll-margin-top: 96px;
+}
+
+.timeline-top {
+  align-items: flex-start;
+}
+
+.timeline-top .date-pill {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-top: 2px;
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--ink);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 750;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.timeline-item.current .date-pill {
+  border-color: #9bbdab;
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.timeline-item .role-org {
+  margin: -4px 0 10px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.role-org strong {
+  color: var(--ink);
+}
+
+.tags.compact {
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tags.compact span {
+  padding: 3px 8px;
+  font-size: 12.5px;
+}
+
+.section-aside {
+  position: sticky;
+  top: 96px;
+  display: grid;
+  gap: 18px;
+  align-self: start;
+}
+
+.section-aside h2 {
+  margin-bottom: 0;
+}
+
+.aside-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.role-index {
+  display: grid;
+  border-left: 2px solid var(--line);
+}
+
+.role-index a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-left: -2px;
+  padding: 9px 14px;
+  border-left: 2px solid transparent;
+  color: var(--muted);
+  font-weight: 750;
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.role-index a small {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+
+.role-index a:hover,
+.role-index a.active {
+  border-left-color: var(--green);
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.role-index a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
 .timeline-item.current::before {
   background: #1f8f6c;
 }
@@ -832,6 +937,25 @@ h3 {
     display: block;
     margin-top: 4px;
     text-align: left;
+  }
+
+  .timeline-top .date-pill {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .section-aside {
+    position: static;
+  }
+
+  .role-index {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 

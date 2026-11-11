@@ -4,6 +4,27 @@ if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
+// Experience index: highlight the role whose card is in the middle of the screen.
+const roleLinks = [...document.querySelectorAll(".role-index a")];
+
+if (roleLinks.length && "IntersectionObserver" in window) {
+  const linkFor = new Map(roleLinks.map((link) => [link.hash.slice(1), link]));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        roleLinks.forEach((link) => link.classList.remove("active"));
+        linkFor.get(entry.target.id)?.classList.add("active");
+      });
+    },
+    { rootMargin: "-35% 0px -55% 0px" }
+  );
+  linkFor.forEach((_, id) => {
+    const card = document.getElementById(id);
+    if (card) observer.observe(card);
+  });
+}
+
 // Contact form: sends through FormSubmit (formsubmit.co) to the address in the
 // form's action, so the static site needs no server. Without JavaScript the form
 // still posts normally and FormSubmit redirects back to ?sent=1#contact.
